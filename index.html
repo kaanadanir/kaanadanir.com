@@ -5,18 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaan Adanir</title>
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            height: 100%;
         }
-        h1, h2 {
-            border-bottom: 1px solid #ddd;
+        .banner {
+            background-color: #FF7F00;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            min-height: calc(100% - 80px); /* Adjust for banner height */
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        h2 {
+            border-bottom: 2px solid #FF7F00;
             padding-bottom: 10px;
+            color: #FF7F00;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
         }
         a {
             color: #0066cc;
@@ -24,34 +54,21 @@
             transition: color 0.3s ease;
         }
         a:hover {
-            color: #004499;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
+            color: #FF7F00;
         }
         .date {
             color: #666;
             font-size: 0.9em;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Kaan Adanir</h1>
-        <p>Exploring ideas at the intersection of technology, business, and society.</p>
-    </header>
-
-    <nav>
-        <a href="#essays">Essays</a> |
-        <a href="#about">About</a>
-    </nav>
-
-    <main>
-        <section id="essays">
+    <div class="banner">
+        Kaan Adanir
+    </div>
+    <div class="container">
+        <div class="sidebar">
             <h2>Essays</h2>
             <ul>
                 <li><a href="#">The Impact of AI on Future Workforces</a> <span class="date">July 2024</span></li>
@@ -59,16 +76,12 @@
                 <li><a href="#">The Art of Strategic Thinking in Business</a> <span class="date">May 2024</span></li>
                 <li><a href="#">Navigating the Ethical Challenges of Emerging Technologies</a> <span class="date">April 2024</span></li>
             </ul>
-        </section>
-
-        <section id="about">
-            <h2>About</h2>
-            <p>I'm Kaan Adanir, a thinker and writer exploring the complex relationships between technology, business, and society. Through my essays, I aim to provide insights into how these forces shape our world and future. My goal is to spark meaningful discussions and contribute to a deeper understanding of our rapidly evolving digital landscape.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Kaan Adanir. All rights reserved.</p>
-    </footer>
+        </div>
+        <div class="content">
+            <h2>Welcome</h2>
+            <p>Exploring ideas at the intersection of technology, business, and society.</p>
+            <p>Select an essay from the sidebar to start reading.</p>
+        </div>
+    </div>
 </body>
 </html>
